@@ -1,0 +1,20 @@
+.centered {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .welcome {
+    font-size: 4rem;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px #000000;
+    margin-bottom: -23rem;
+    margin-left: 1rem;
+    position: absolute;
+  }
+  img {
+    vertical-align: middle;
+    width: 100%;}
