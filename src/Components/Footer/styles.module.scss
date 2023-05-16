@@ -1,0 +1,42 @@
+.footerSuperDiv {
+ 
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    flex-wrap: wrap;
+    padding: 5rem;
+  
+    .customerCareDiv{
+      ul {
+        margin: 0;
+        padding: 0;
+        li{
+
+          list-style: none;
+          
+        }
+      }
+    }
+  
+    .categoriesLinkDiv{
+      ul{
+        margin: 0;
+        padding: 0;
+        li{
+          list-style: none;;
+        }
+      }
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+  

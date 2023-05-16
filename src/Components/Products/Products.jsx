@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from 'axios'
-import { Card, CardBody, CardTitle, Button, CardText, CardSubtitle } from 'reactstrap';
-import styles from './styles.module.scss'
+import { Card, CardBody, CardTitle, Button,CardSubtitle } from 'reactstrap';
+import styles from "./styles.module.scss";
+
 
 
 export const ProductsApi = () => {
@@ -16,7 +17,7 @@ export const ProductsApi = () => {
     try {
       axios.get('https://fakestoreapi.com/products')
         .then(response => {
-        //   console.log('response', response.data)
+          console.log('response', response.data)
           setProducts(response.data)
           setLoading(false);
         })
@@ -37,30 +38,30 @@ export const ProductsApi = () => {
 
   return (
     <>
-      <ul>
+    <h3 className={styles.featuredtag}>Featured Products</h3>
+    
+      <ul className={styles.containerStyles}>
         {products.map((product) => (
-          <Card className={styles.card-styles}
-          
-        >
+         <Card className={styles.cardStyles} 
+            
+            >
           <img
             alt="Sample"
-            src="https://picsum.photos/300/200"
+            src={product.image}
           />
-          <CardBody>
+          <CardBody >
             <CardTitle tag="h5">
-              {product.title}
+              {product.name}
             </CardTitle>
             <CardSubtitle
               className="mb-2 text-muted"
               tag="h6"
             >
-              Card subtitle
+            Rs {product.price}
             </CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the bulk of the card‘s content.
-            </CardText>
+            
             <Button>
-              Button
+              View Item
             </Button>
           </CardBody>
         </Card>

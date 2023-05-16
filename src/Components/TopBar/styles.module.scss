@@ -1,0 +1,29 @@
+.wrapper{
+    max-width: 100%;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 12s linear infinite;
+    
+  }
+  
+  .marquee p {
+    display: inline-block;
+    color: aliceblue;
+    
+    
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }  
