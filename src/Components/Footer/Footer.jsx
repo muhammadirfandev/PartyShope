@@ -2,6 +2,10 @@ import React from "react";
 import styles from "./styles.module.scss"
 import { Socialicons } from "../Socialicons/Socialicons";
 import { DescTitle } from "../DescTitle/DescTitle";
+import { IconWithtext } from "../IconWithText/IconWithText";
+import locationSvg from "./../../assets/images/location-dot-solid.svg"
+import emailSvg from "./../../assets/images/email-logo1.svg"
+import phoneSvg from "./../../assets/images/phone-solid.svg"
 
 
 
@@ -27,7 +31,7 @@ return(
 <DescTitle title="Customer Care"/>
 <div>
 <ul>
-  <li><a href="#about">About Us</a></li>
+  <li style={{ listStyle: 'none' }}><a href="#about">About Us</a></li>
   <li><a href="#contact">Contact Us</a></li>
   <li><a href="#privacy">Privacy Policy</a></li>
   <li><a href="#exchange">Exchange Policy</a></li>
@@ -53,18 +57,19 @@ return(
 </ul>
 </div>
 </div>
+<div className={styles.getInTouchDiv}>
+ <DescTitle title="Get In Touch"/>
+ <div className={styles.getInTouchDivIcons}>
+<IconWithtext icon = {locationSvg} text = "Walton Road Lahore &nbsp; &nbsp; " />
+<IconWithtext icon = {emailSvg} text = "info@partyshope.com" />
+<IconWithtext icon = {phoneSvg} text = "+92 322 490 6361 &nbsp;&nbsp; &nbsp; " />
+</div>
+</div>
 
 <div className={styles.footerNewsLetterDiv}>
 
 <Socialicons/>
 </div>
-
-
-
-
-
-
-
 </div>
 
 
@@ -86,7 +91,7 @@ return(
 
 
 
-<p className={styles.copyright}>&copy; 2023 PartyShope. All rights reserved. </p>
+<p className={styles.copyright}>Copyright &copy; 2023 PartyShope. All rights reserved. </p>
 </>);
 
 

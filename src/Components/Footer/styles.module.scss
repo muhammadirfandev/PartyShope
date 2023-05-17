@@ -1,42 +1,61 @@
 .footerSuperDiv {
- 
-    display: flex;
-    border: 1px solid black;
-    justify-content: space-between;
-    align-items: center;
-    background-color: bisque;
-    flex-wrap: wrap;
-    padding: 5rem;
-  
-    .customerCareDiv{
-      ul {
-        margin: 0;
-        padding: 0;
-        li{
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  background-color: bisque;
+  flex-wrap: wrap;
+  padding: 2rem;
 
-          list-style: none;
-          
+  & > div {
+    margin: 1rem; /* Adjust the margin value as needed */
+  }
+  .customerCareDiv {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        a{
+          text-decoration: none !important;
+          color: black;
         }
       }
     }
-  
-    .categoriesLinkDiv{
-      ul{
-        margin: 0;
-        padding: 0;
-        li{
-          list-style: none;;
+  }
+
+  .categoriesLinkDiv {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        a{
+          text-decoration: none !important;
+          color: black;
         }
       }
     }
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  }
+
+  .getInTouchDiv {
+    .getInTouchDivIcons {
+      display: flex;
+      flex-direction: column;
+      & > div {
+        margin: 0.7rem; /* Adjust the margin value as needed */
+      }
+      
+      
+      
+    }
   }
   
+}
+.copyright{
+  margin: 0;
+  padding: 0.7rem;
+  background-color: black;
+  color: azure;
+  text-align: center;
+}

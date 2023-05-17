@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './styles.module.scss'
+import { Socialicons } from '../Socialicons/Socialicons';
 
 export const TopBar=()=>{
     return ( 
 
 <div class={styles.wrapper}>
+  <Socialicons/>
         <div class={styles.marquee}>
            
           <p>
