@@ -1,21 +1,22 @@
-
 import React from 'react';
 import './App.css';
-import { Footer } from './Components/Footer/Footer';
-import { Hero } from './Components/Hero/Hero';
-import { Navbar } from './Components/Navbar/Navbar';
-import { ProductsApi } from './Components/Products/Products';
-import { TopBar } from './Components/TopBar/TopBar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from './Pages/Home';
+import { BirthdayPage } from './Pages/Birthday';
+import { AnniversaryPage } from './Pages/AnniversaryPage';
+
 
 function App() {
   return (
-    <>
-    <TopBar/>
-    <Navbar/>
-    <Hero/>
-    <ProductsApi/>
-    <Footer/>
-      </>
+  
+  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/birthday-decor" element={<BirthdayPage/>} />
+        <Route path="/anniversary-decor" element={<AnniversaryPage/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
