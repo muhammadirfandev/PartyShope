@@ -9,7 +9,6 @@ export const PrivacyPolicy=()=>{
     return(<>
     
     <TopBar/>
-
     <Navbar/>
     <h1>Privacy Policy for PartyShope</h1>
     <p>
