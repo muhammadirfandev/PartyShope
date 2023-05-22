@@ -12,7 +12,7 @@ export const LoginPage=()=>{
     <TopBar/>
 
     <Navbar/>
-    
+    <h1>Login Page</h1>
     <LoginForm/>
 
     <Footer/>
