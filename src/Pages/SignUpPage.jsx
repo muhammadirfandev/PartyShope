@@ -17,7 +17,7 @@ export const SignUpPage=()=>{
 
     <Footer/>
 
+    </>);
 
-
-
+    }
 
