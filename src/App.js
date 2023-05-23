@@ -18,9 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/birthday-decor" element={<BirthdayPage/>} />
         <Route path="/anniversary-decor" element={<AnniversaryPage/>} />
-
         <Route exact path="/login" component={LoginForm} />
-         
         <Route path ="/special-events" element={<SpecialEvents/>}/>
         <Route path = "/login" element = {<LoginPage/>}/>
 

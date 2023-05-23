@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,7 +14,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 
-
 const pages = [
   { label: 'Birthday Decor', path: '/birthday-decor' },
   { label: 'Anniversary Decor', path: '/anniversary-decor' },
@@ -22,14 +21,24 @@ const pages = [
   { label: 'Contact Us', path: '/contact-us' },
 ];
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = [
+  { label: 'Account', path: '/account' },
+  { label: 'Login', path: '/login' },
+  { label: 'Signup', path: '/sign-up' }
+];
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
+  };
+
+  const settingsPath = (path) => {
+    navigate(path);
+    handleCloseUserMenu();
   };
 
   const handleOpenUserMenu = (event) => {
@@ -64,7 +73,7 @@ export const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            Party Shope
+            Party Shop
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -123,7 +132,7 @@ export const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            Party Shope
+            Party Shop
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -163,8 +172,8 @@ export const Navbar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.label} onClick={() => settingsPath(setting.path)}>
+                  <Typography textAlign="center">{setting.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
