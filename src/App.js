@@ -7,6 +7,7 @@ import { AnniversaryPage } from './Pages/AnniversaryPage';
 import LoginForm from './Components/LoginForm/LoginForm';
 import { SpecialEvents } from './Pages/SpecialEvents';
 import { LoginPage } from './Pages/LoginPage';
+import { SignUpPage } from './Pages/SignUpPage';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/login" component={LoginForm} />
         <Route path ="/special-events" element={<SpecialEvents/>}/>
         <Route path = "/login" element = {<LoginPage/>}/>
+        <Route path = "/sign-up" element={<SignUpPage/>}/>
 
       </Routes>
     </BrowserRouter>
