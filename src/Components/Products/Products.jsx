@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios'
 import { Card, CardBody, CardTitle, Button,CardSubtitle } from 'reactstrap';
 import styles from "./styles.module.scss";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -10,6 +11,8 @@ export const ProductsApi = () => {
   let [products, setProducts] = useState([]);
   let [loading, setLoading] = useState(true);
   let [error, setError] = useState(false);
+  
+  const navigate = useNavigate()
 
   useEffect(() => {
     setError(false);
@@ -60,7 +63,9 @@ export const ProductsApi = () => {
             Rs {product.price}
             </CardSubtitle>
             
-            <Button>
+            <Button onClick={()=>{
+              navigate(product.id)
+            }}>
               View Item
             </Button>
           </CardBody>

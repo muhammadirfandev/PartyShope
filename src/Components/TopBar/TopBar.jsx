@@ -16,7 +16,7 @@ export const TopBar=()=>{
             Fashion is like eating, you shouldn't stick to the same menu &nbsp;&nbsp;&nbsp;&nbsp;
           </p>
           <p>
-            Fashion is like eating, you shouldn't stick to the same menu&nbsp;&nbsp;&nbsp;&nbsp;
+            Fashion is like eating, you shouldn't stick to the same menu &nbsp;&nbsp;&nbsp;&nbsp;
           </p>
           <p>
             Fashion is like eating, you shouldn't stick to the same menu &nbsp;&nbsp;&nbsp;&nbsp;
