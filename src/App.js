@@ -4,7 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from './Pages/Home';
 import { BirthdayPage } from './Pages/Birthday';
 import { AnniversaryPage } from './Pages/AnniversaryPage';
-import LoginForm from './LoginForm';
+import LoginForm from './Components/LoginForm/LoginForm';
+import { SpecialEvents } from './Pages/SpecialEvents';
+import { LoginPage } from './Pages/LoginPage';
+
 
 function App() {
   return (
@@ -15,8 +18,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/birthday-decor" element={<BirthdayPage/>} />
         <Route path="/anniversary-decor" element={<AnniversaryPage/>} />
+
         <Route exact path="/login" component={LoginForm} />
-         </Routes>
+         
+        <Route path ="/special-events" element={<SpecialEvents/>}/>
+        <Route path = "/login" element = {<LoginPage/>}/>
+
+      </Routes>
     </BrowserRouter>
   );
 }
